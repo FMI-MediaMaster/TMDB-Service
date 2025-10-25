@@ -8,15 +8,18 @@ importers:
 
   .:
     dependencies:
-      '@FMI-MediaMaster/express-crud-router':
-        specifier: ^1.0.0
-        version: 1.0.0
       '@FMI-MediaMaster/express-middleware':
         specifier: ^1.0.2
         version: 1.0.2
+      '@FMI-MediaMaster/http-errors':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@FMI-MediaMaster/load-dotenv':
         specifier: ^1.0.0
         version: 1.0.0
+      '@FMI-MediaMaster/metadata-service-tests':
+        specifier: ^1.0.3
+        version: 1.0.3
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
@@ -32,9 +35,9 @@ importers:
       helmet:
         specifier: ^8.1.0
         version: 8.1.0
-      zod:
-        specifier: ^4.1.12
-        version: 4.1.12
+      node-fetch:
+        specifier: ^3.3.2
+        version: 3.3.2
     devDependencies:
       '@eslint/js':
         specifier: ^9.38.0
@@ -90,14 +93,17 @@ importers:
 
 packages:
 
-  '@FMI-MediaMaster/express-crud-router@1.0.0':
-    resolution: {integrity: sha512-0KDwb2rkEzSWmoS9tX2MCXEnJJjGxvsskmpSH8CcQ9CNvnRWlpA7bvN/5e+09rkYactbgqrncgkItc+5lRD5LQ==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/express-crud-router/1.0.0/cdd5bad680306e6c04eb7df367fd0383c7b6cee4}
-
   '@FMI-MediaMaster/express-middleware@1.0.2':
     resolution: {integrity: sha512-nQ3iUMxo8YD6S+HJj5io2Yq8hmIywfbyVAgtoH+8gkLEm+gWNqh6Lt/UzcZ9Gf9P8YEz/36j3tMgXJhFcQhsUg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/express-middleware/1.0.2/f7593948bf324c7860758ab472f6eee489103741}
 
+  '@FMI-MediaMaster/http-errors@1.0.0':
+    resolution: {integrity: sha512-ZUvB5/QYahzS7Vk8w1IL/wyg7sJmvsIhmPT6jCbWRpo8XBqaIW4xNOm5OWGDooWR9KFPS7Iyc+EbRo2W5mLYdw==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/http-errors/1.0.0/b91bc384a8b037b078854a4b539c2f91cde7c99a}
+
   '@FMI-MediaMaster/load-dotenv@1.0.0':
     resolution: {integrity: sha512-ohGpC+3q+QFnDlcfFJv2cyHbP8xKKEhHDQoFN4ejacHEjps6M0usbaekLlZIizovjd8lp/P4Vv3NzuInSeLflg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/load-dotenv/1.0.0/c75bd4888867e98b90e9612e01f830147886df45}
+
+  '@FMI-MediaMaster/metadata-service-tests@1.0.3':
+    resolution: {integrity: sha512-+WHrBIX5ata+NYsdsMw1aE5LM90pvPx2D+aAUrLQ8Fy9a3cwxsAi+221l6b+nyBp0l2h1y1gGcNqzq+Jfyykew==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/metadata-service-tests/1.0.3/1f827358892f9cd578a4271dca555f6e7c0cabad}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -865,6 +871,10 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
+  data-uri-to-buffer@4.0.1:
+    resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
+    engines: {node: '>= 12'}
+
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -1054,6 +1064,10 @@ packages:
       picomatch:
         optional: true
 
+  fetch-blob@3.2.0:
+    resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
+    engines: {node: ^12.20 || >= 14.13}
+
   fflate@0.8.2:
     resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
 
@@ -1087,6 +1101,10 @@ packages:
   form-data@4.0.4:
     resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
     engines: {node: '>= 6'}
+
+  formdata-polyfill@4.0.10:
+    resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
+    engines: {node: '>=12.20.0'}
 
   formidable@3.5.4:
     resolution: {integrity: sha512-YikH+7CUTOtP44ZTnUhR7Ic2UASBPOqmaRkRKxRbywPTe5VxF7RRCck4af9wutiZ/QKM5nME9Bie2fFaPz5Gug==}
@@ -1435,6 +1453,15 @@ packages:
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
+
+  node-domexception@1.0.0:
+    resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
+    engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
+
+  node-fetch@3.3.2:
+    resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -1917,6 +1944,10 @@ packages:
       jsdom:
         optional: true
 
+  web-streams-polyfill@3.3.3:
+    resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
+    engines: {node: '>= 8'}
+
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -1955,13 +1986,6 @@ packages:
 
 snapshots:
 
-  '@FMI-MediaMaster/express-crud-router@1.0.0':
-    dependencies:
-      express: 5.1.0
-      jsonwebtoken: 9.0.2
-    transitivePeerDependencies:
-      - supports-color
-
   '@FMI-MediaMaster/express-middleware@1.0.2':
     dependencies:
       '@types/morgan': 1.9.10
@@ -1973,9 +1997,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@FMI-MediaMaster/http-errors@1.0.0': {}
+
   '@FMI-MediaMaster/load-dotenv@1.0.0':
     dependencies:
       dotenv: 17.2.3
+
+  '@FMI-MediaMaster/metadata-service-tests@1.0.3': {}
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -2691,6 +2719,8 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  data-uri-to-buffer@4.0.1: {}
+
   debug@2.6.9:
     dependencies:
       ms: 2.0.0
@@ -2922,6 +2952,11 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
+  fetch-blob@3.2.0:
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 3.3.3
+
   fflate@0.8.2: {}
 
   file-entry-cache@8.0.0:
@@ -2967,6 +3002,10 @@ snapshots:
       es-set-tostringtag: 2.1.0
       hasown: 2.0.2
       mime-types: 2.1.35
+
+  formdata-polyfill@4.0.10:
+    dependencies:
+      fetch-blob: 3.2.0
 
   formidable@3.5.4:
     dependencies:
@@ -3296,6 +3335,14 @@ snapshots:
   natural-compare@1.4.0: {}
 
   negotiator@1.0.0: {}
+
+  node-domexception@1.0.0: {}
+
+  node-fetch@3.3.2:
+    dependencies:
+      data-uri-to-buffer: 4.0.1
+      fetch-blob: 3.2.0
+      formdata-polyfill: 4.0.10
 
   normalize-path@3.0.0: {}
 
@@ -3801,6 +3848,8 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  web-streams-polyfill@3.3.3: {}
 
   which@2.0.2:
     dependencies:

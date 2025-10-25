@@ -42,6 +42,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
@@ -51,12 +52,3 @@ jobs:
           subject-name: ghcr.io/${{ github.repository }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-
-      - name: Make GHCR image public
-        run: |
-          SERVICE_NAME=$(basename -s .git "$(git config --get remote.origin.url)" | tr '[:upper:]' '[:lower:]')
-          echo "${{ secrets.WRITE_PACKAGES_TOKEN }}" | gh auth login --with-token
-          gh api -X PATCH \
-            -H "Accept: application/vnd.github+json" \
-            /orgs/FMI-MediaMaster/packages/container/$SERVICE_NAME/versions \
-            -f visibility=public

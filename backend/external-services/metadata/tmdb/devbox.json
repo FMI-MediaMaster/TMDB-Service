@@ -12,7 +12,10 @@
       "pnpm install"
     ],
     "scripts": {
-      "bruno": "nohup bruno >/dev/null 2>&1 &"
+      "bruno": "nohup bruno >/dev/null 2>&1 &",
+      "docker:build": "docker build -t tmdb-service .",
+      "docker:run": "docker run -d --rm --env-file .env -p 8010:8010 --name tmdb-service tmdb-service",
+      "docker:stop": "docker stop tmdb-service",
     }
   }
 }

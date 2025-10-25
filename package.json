@@ -34,12 +34,14 @@
   "dependencies": {
     "@media-master/express-crud-router": "^0.0.1",
     "@media-master/express-middleware": "^0.0.1",
+    "@media-master/http-errors": "^0.0.1",
     "@media-master/load-dotenv": "^0.0.1",
+    "@media-master/metadata-service-tests": "^0.0.1",
     "chalk": "^5.6.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
-    "zod": "^4.1.12"
+    "node-fetch": "^3.3.2"
   }
 }

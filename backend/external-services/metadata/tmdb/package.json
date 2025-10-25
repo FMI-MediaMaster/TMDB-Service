@@ -7,12 +7,12 @@
     "build": "rm -rf dist && tsc -b && tsc-alias && tsc-esm-fix --target dist",
     "prestart": "pnpm run build",
     "start": "NODE_ENV=production node dist/index.js",
-    "dev": "NODE_ENV=development pnpx tsx -r tsconfig-paths/register src/index.ts",
+    "dev": "NODE_ENV=development pnpx tsx watch -r tsconfig-paths/register src/index.ts",
     "test": "NODE_ENV=test vitest --run",
     "test:ui": "NODE_ENV=test vitest --ui",
     "test:coverage": "NODE_ENV=test vitest run --coverage",
-    "lint": "eslint_d src",
-    "lint:fix": "eslint_d --fix src"
+    "lint": "eslint_d src tests",
+    "lint:fix": "eslint_d --fix src tests"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
@@ -34,14 +34,15 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@FMI-MediaMaster/express-middleware": "^1.0.1",
+    "@FMI-MediaMaster/express-middleware": "^1.0.2",
     "@FMI-MediaMaster/http-errors": "^1.0.0",
     "@FMI-MediaMaster/load-dotenv": "^1.0.0",
-    "@FMI-MediaMaster/metadata-service-tests": "^1.0.2",
+    "@FMI-MediaMaster/metadata-service-tests": "^1.0.3",
     "chalk": "^5.6.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "node-fetch": "^3.3.2"
   }
 }

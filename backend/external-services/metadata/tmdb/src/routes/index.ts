@@ -1,10 +1,9 @@
-import userController from '@controllers/user';
 import { Router } from 'express';
-import { createRouter } from '@FMI-MediaMaster/express-crud-router';
+import tmdbRouter from '@routes/tmdb';
 
 const routes: Router = Router();
 
-routes.use('/users', createRouter(userController));
+routes.use('/', tmdbRouter);
 
 export default routes;
 

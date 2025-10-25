@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import tmdbRouter from '@routes/tmdb';
+import tmdbController from '@controllers/tmdb';
 
 const routes: Router = Router();
 
-routes.use('/', tmdbRouter);
+routes.get('/:type/:method', tmdbController.handler);
 
 export default routes;
 

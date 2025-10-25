@@ -1,13 +1,17 @@
 meta {
-  name: Read Users
+  name: Get Info
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{url}}/users
+  url: {{url}}/series/info?id=13
   body: none
   auth: inherit
+}
+
+params:query {
+  id: 13
 }
 
 settings {

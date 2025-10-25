@@ -1,4 +1,5 @@
 node_modules
+<<<<<<< HEAD
 bruno
 dist
 .env
@@ -10,3 +11,5 @@ Dockerfile
 tsconfig.tsbuildinfo
 .git
 .gitignore
+=======
+>>>>>>> 5bf9ab4 ([RESTRUCTURE] Create TMDB service)

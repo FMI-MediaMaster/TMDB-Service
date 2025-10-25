@@ -1,0 +1,19 @@
+meta {
+  name: Get Recommendations
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/movie/recommendations?id=1313
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 1313
+}
+
+settings {
+  encodeUrl: true
+}

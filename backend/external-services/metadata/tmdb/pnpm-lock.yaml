@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@FMI-MediaMaster/metadata-service-tests':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.2
+        version: 1.0.2
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
@@ -102,8 +102,8 @@ packages:
   '@FMI-MediaMaster/load-dotenv@1.0.0':
     resolution: {integrity: sha512-ohGpC+3q+QFnDlcfFJv2cyHbP8xKKEhHDQoFN4ejacHEjps6M0usbaekLlZIizovjd8lp/P4Vv3NzuInSeLflg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/load-dotenv/1.0.0/c75bd4888867e98b90e9612e01f830147886df45}
 
-  '@FMI-MediaMaster/metadata-service-tests@1.0.0':
-    resolution: {integrity: sha512-/lpzZgDMm58RAznZOOuqEE/7Y1gJHpxIS9Xq5wmJM985Zf8Pn9QJk4QDQoG5+iTJ2svlCsZlrCbWiyHZP8FPDg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/metadata-service-tests/1.0.0/6cecf95a53eba5cf67e029f74f8240a47a6d91c2}
+  '@FMI-MediaMaster/metadata-service-tests@1.0.2':
+    resolution: {integrity: sha512-Rm+WfOsQFubXi7pvM2MgTD8yus3QaPPOU7HTsW8bAqC9Yj7Ql+Tw4HQt/sINUWr1licEmFtnUT4ybAuMF4hSTQ==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/metadata-service-tests/1.0.2/e7569ac6e1da515696bb05c3657da203e0bb6bee}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1983,7 +1983,7 @@ snapshots:
     dependencies:
       dotenv: 17.2.3
 
-  '@FMI-MediaMaster/metadata-service-tests@1.0.0': {}
+  '@FMI-MediaMaster/metadata-service-tests@1.0.2': {}
 
   '@ampproject/remapping@2.3.0':
     dependencies:

@@ -6,8 +6,8 @@ import app from '../src/app';
 const server = app as Express;
 
 describe('Controller', () => {
-    describe('Endpoint /api/movie', () => {
-        const endpoint: string = '/api/movie';
+    describe('Endpoint /api/movies', () => {
+        const endpoint: string = '/api/movies';
         const validMap: object = {
             'Spider-Man': '557',
             'Home alone': '771',
@@ -24,18 +24,19 @@ describe('Controller', () => {
                 name: { type: 'string' },
             },
             info: {
-                originalname: { type: 'string' },
+                name: { type: 'string' },
                 description: { type: 'string' },
                 language: { type: 'string' },
-                artworks: { type: 'string' },
-                coverimage: { type: 'string' },
-                creators: { type: 'stringArray' },
+                artwork: { type: 'string' },
+                cover: { type: 'string' },
+                producers: { type: 'stringArray' },
                 genres: { type: 'stringArray' },
                 status: { type: 'string' },
-                communityscore: { type: 'number' },
-                seriesname: { type: 'stringArray' },
-                releasedate: { type: 'string' },
-                durationinseconds: { type: 'number' },
+                links: { type: 'objectArray' },
+                community_score: { type: 'number' },
+                series: { type: 'stringArray' },
+                release_date: { type: 'string' },
+                runtime: { type: 'number' },
             },
             recommendations: {
                 id: { type: 'number' },
@@ -46,7 +47,7 @@ describe('Controller', () => {
         runMetadataTests(
             server,
             endpoint,
-            { validMap, invalidMap, fieldsMap, type: 'movie', }
+            { validMap, invalidMap, fieldsMap, type: 'movie' }
         );
     });
 
@@ -68,16 +69,17 @@ describe('Controller', () => {
                 name: { type: 'string' },
             },
             info: {
-                originalname: { type: 'string' },
+                name: { type: 'string' },
                 description: { type: 'string' },
                 language: { type: 'string' },
-                artworks: { type: 'string' },
-                coverimage: { type: 'string' },
-                creators: { type: 'stringArray' },
+                artwork: { type: 'string' },
+                cover: { type: 'string' },
+                producers: { type: 'stringArray' },
                 genres: { type: 'stringArray' },
                 status: { type: 'string' },
-                communityscore: { type: 'number' },
-                releasedate: { type: 'string' },
+                links: { type: 'objectArray' },
+                community_score: { type: 'number' },
+                release_date: { type: 'string' },
                 seasons: { type: 'objectArray' },
             },
             recommendations: {
@@ -89,7 +91,7 @@ describe('Controller', () => {
         runMetadataTests(
             server,
             endpoint,
-            { validMap, invalidMap, fieldsMap, type: 'series', }
+            { validMap, invalidMap, fieldsMap, type: 'series' }
         );
     });
 });

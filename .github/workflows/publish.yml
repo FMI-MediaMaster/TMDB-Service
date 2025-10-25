@@ -62,3 +62,11 @@ jobs:
           subject-name: ghcr.io/${{ github.repository }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
+
+      - name: Make GHCR image public
+        run: |
+          curl -s -X PATCH \
+            -H "Authorization: token ${{ secrets.WRITE_PACKAGES_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://ghcr.io/api/v1/packages/container/${{ github.repository }}/versions/${{ steps.push.outputs.digest }} \
+            -d '{"visibility":"public"}'

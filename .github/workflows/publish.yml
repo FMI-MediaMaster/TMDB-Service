@@ -56,8 +56,7 @@ jobs:
         run: |
           SERVICE_NAME=$(basename -s .git "$(git config --get remote.origin.url)" | tr '[:upper:]' '[:lower:]')
           echo "${{ secrets.WRITE_PACKAGES_TOKEN }}" | gh auth login --with-token
-          gh api \
-            -X PATCH \
+          gh api -X PATCH \
             -H "Accept: application/vnd.github+json" \
-            /user/packages/container/$SERVICE_NAME/versions \
+            /orgs/FMI-MediaMaster/packages/container/$SERVICE_NAME/versions \
             -f visibility=public

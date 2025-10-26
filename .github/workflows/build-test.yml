@@ -55,6 +55,10 @@ jobs:
 
             if [[ "$VALUE" =~ \<YOUR_.*\> ]]; then
               SECRET="${!KEY}"
+              if [ -z "$SECRET" ]; then
+                echo "Warning: environment variable '$KEY' is not set!"
+                SECRET=""
+              fi
               echo "$KEY=$SECRET" >> .env
             else
               echo "$line" >> .env

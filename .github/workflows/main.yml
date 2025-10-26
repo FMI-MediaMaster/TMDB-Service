@@ -22,4 +22,5 @@ jobs:
 
   push_to_registries:
     name: Publish Dockerimage
+    if: startsWith(github.ref, 'refs/tags/')
     uses: ./.github/workflows/publish.yml

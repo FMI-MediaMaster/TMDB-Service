@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
-import config from '@FMI-MediaMaster/load-dotenv';
-import errors from '@FMI-MediaMaster/http-errors';
+import config from '@media-master/load-dotenv';
+import errors from '@media-master/http-errors';
 import {
     MediaOption,
     Query,

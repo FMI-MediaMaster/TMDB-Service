@@ -1,4 +1,4 @@
-import runMetadataTests, { Fields } from '@FMI-MediaMaster/metadata-service-tests';
+import runMetadataTests, { Fields } from '@media-master/metadata-service-tests';
 import { Express } from 'express';
 import { describe } from 'vitest';
 import app from '../src/app';

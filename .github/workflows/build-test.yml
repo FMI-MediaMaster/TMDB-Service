@@ -1,7 +1,11 @@
 name: Build and test
 
-on: 
+on:
   workflow_call:
+    inputs:
+      TMDB_ACCESS_TOKEN:
+        required: true
+        type: string
 
 jobs: 
   build-test:
@@ -39,8 +43,8 @@ jobs:
 
       - name: Generate .env from .env.example
         shell: bash
-        env: 
-          TMDB_ACCESS_TOKEN: ${{ secrets.TMDB_ACCESS_TOKEN }}
+        env:
+          TMDB_ACCESS_TOKEN: ${{ inputs.TMDB_ACCESS_TOKEN }}
         run: |
           > .env
 

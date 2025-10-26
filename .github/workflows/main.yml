@@ -19,6 +19,8 @@ jobs:
   build_and_test:
     name: Build and test
     uses: ./.github/workflows/build-test.yml
+    with:
+      TMDB_ACCESS_TOKEN: ${{ secrets.TMDB_ACCESS_TOKEN }}
 
   push_to_registries:
     name: Publish Dockerimage

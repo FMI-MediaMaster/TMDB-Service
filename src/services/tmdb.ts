@@ -28,7 +28,7 @@ export default class TmdbService {
         this.mediaType = mediaType === 'movies' ? 'movie' : 'tv';
         this.headers = {
             accept: 'application/json',
-            Authorization: `Bearer ${config.ACCESS_TOKEN}`,
+            Authorization: `Bearer ${config.TMDB_ACCESS_TOKEN}`,
         };
     };
 

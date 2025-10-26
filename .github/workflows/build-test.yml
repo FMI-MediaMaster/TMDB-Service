@@ -6,6 +6,7 @@ on:
 jobs: 
   build-test:
     runs-on: ubuntu-latest    
+    environment: test
 
     steps:
       - name: Checkout
@@ -52,7 +53,7 @@ jobs:
             VALUE="${line#*=}"
 
             if [[ "$VALUE" =~ \<YOUR_.*\> ]]; then
-              SECRET="${{ secrets[$KEY] }}"
+              SECRET="${!KEY}"
               echo "$KEY=$SECRET" >> .env
             else
               echo "$line" >> .env

@@ -1,3 +1,4 @@
+import { Router } from 'express';
 import tmdbController from '@controllers/tmdb';
 
 const routes: Router = Router();

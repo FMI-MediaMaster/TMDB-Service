@@ -2,10 +2,6 @@ name: Build and test
 
 on:
   workflow_call:
-    secrets:
-      TMDB_ACCESS_TOKEN:
-        required: true
-        type: string
 
 jobs: 
   build-test:

@@ -34,10 +34,10 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@FMI-MediaMaster/express-middleware": "^1.0.2",
-    "@FMI-MediaMaster/http-errors": "^1.0.0",
-    "@FMI-MediaMaster/load-dotenv": "^1.0.0",
-    "@FMI-MediaMaster/metadata-service-tests": "^1.0.3",
+    "@media-master/express-middleware": "^0.0.1",
+    "@media-master/http-errors": "^0.0.1",
+    "@media-master/load-dotenv": "^0.0.1",
+    "@media-master/metadata-service-tests": "^0.0.1",
     "chalk": "^5.6.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

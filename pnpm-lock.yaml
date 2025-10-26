@@ -8,18 +8,18 @@ importers:
 
   .:
     dependencies:
-      '@FMI-MediaMaster/express-middleware':
-        specifier: ^1.0.2
-        version: 1.0.2
-      '@FMI-MediaMaster/http-errors':
-        specifier: ^1.0.0
-        version: 1.0.0
-      '@FMI-MediaMaster/load-dotenv':
-        specifier: ^1.0.0
-        version: 1.0.0
-      '@FMI-MediaMaster/metadata-service-tests':
-        specifier: ^1.0.3
-        version: 1.0.3
+      '@media-master/express-middleware':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@media-master/http-errors':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@media-master/load-dotenv':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@media-master/metadata-service-tests':
+        specifier: ^0.0.1
+        version: 0.0.1
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
@@ -92,18 +92,6 @@ importers:
         version: 3.2.4(@types/node@24.8.1)(@vitest/ui@3.2.4)
 
 packages:
-
-  '@FMI-MediaMaster/express-middleware@1.0.2':
-    resolution: {integrity: sha512-nQ3iUMxo8YD6S+HJj5io2Yq8hmIywfbyVAgtoH+8gkLEm+gWNqh6Lt/UzcZ9Gf9P8YEz/36j3tMgXJhFcQhsUg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/express-middleware/1.0.2/f7593948bf324c7860758ab472f6eee489103741}
-
-  '@FMI-MediaMaster/http-errors@1.0.0':
-    resolution: {integrity: sha512-ZUvB5/QYahzS7Vk8w1IL/wyg7sJmvsIhmPT6jCbWRpo8XBqaIW4xNOm5OWGDooWR9KFPS7Iyc+EbRo2W5mLYdw==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/http-errors/1.0.0/b91bc384a8b037b078854a4b539c2f91cde7c99a}
-
-  '@FMI-MediaMaster/load-dotenv@1.0.0':
-    resolution: {integrity: sha512-ohGpC+3q+QFnDlcfFJv2cyHbP8xKKEhHDQoFN4ejacHEjps6M0usbaekLlZIizovjd8lp/P4Vv3NzuInSeLflg==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/load-dotenv/1.0.0/c75bd4888867e98b90e9612e01f830147886df45}
-
-  '@FMI-MediaMaster/metadata-service-tests@1.0.3':
-    resolution: {integrity: sha512-+WHrBIX5ata+NYsdsMw1aE5LM90pvPx2D+aAUrLQ8Fy9a3cwxsAi+221l6b+nyBp0l2h1y1gGcNqzq+Jfyykew==, tarball: https://npm.pkg.github.com/download/@FMI-MediaMaster/metadata-service-tests/1.0.3/1f827358892f9cd578a4271dca555f6e7c0cabad}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -368,6 +356,18 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
+  '@media-master/express-middleware@0.0.1':
+    resolution: {integrity: sha512-qmRKRtOm4LOX37B3w3xUHry4YrFOs0zAfwYf0p5BsWkE9SPaD6NykD4KkfRNIac/z6I1WyaACWu8tf4Ck9OR8w==}
+
+  '@media-master/http-errors@0.0.1':
+    resolution: {integrity: sha512-2ZJMB/A8MS83yKSSUUN6AwpQb1Da9RHpZ8A+Eueg0rIsmP6xGDQKM6l/pYg7mMJ/KwAd7oTNnGBIdeciUecOwA==}
+
+  '@media-master/load-dotenv@0.0.1':
+    resolution: {integrity: sha512-5LrokEVViuCoFBbYB4WaVsMuwoK/m/uGXFOCUqvgJZfQQuZRWUQoTHq+yiXtLTZzpmeiWwA0xFRTFa/Vx0/RPg==}
+
+  '@media-master/metadata-service-tests@0.0.1':
+    resolution: {integrity: sha512-Xqs5lOD0EtrGTT553KzBaCbJANixId4b3HnR0araWfZOvQa81nyAeiaqPKvlxd65BftVpa/LUWeQneLr4Wo3EQ==}
+
   '@noble/hashes@1.8.0':
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
@@ -558,9 +558,6 @@ packages:
 
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
-
-  '@types/morgan@1.9.10':
-    resolution: {integrity: sha512-sS4A1zheMvsADRVfT0lYbJ4S9lmsey8Zo2F7cnbYjWHP67Q0AwMYuuzLlkIM2N8gAbb9cubhIVFwcIN2XyYCkA==}
 
   '@types/node@24.8.1':
     resolution: {integrity: sha512-alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==}
@@ -1986,25 +1983,6 @@ packages:
 
 snapshots:
 
-  '@FMI-MediaMaster/express-middleware@1.0.2':
-    dependencies:
-      '@types/morgan': 1.9.10
-      chalk: 5.6.2
-      express: 5.1.0
-      jsonwebtoken: 9.0.2
-      morgan: 1.10.1
-      zod: 4.1.12
-    transitivePeerDependencies:
-      - supports-color
-
-  '@FMI-MediaMaster/http-errors@1.0.0': {}
-
-  '@FMI-MediaMaster/load-dotenv@1.0.0':
-    dependencies:
-      dotenv: 17.2.3
-
-  '@FMI-MediaMaster/metadata-service-tests@1.0.3': {}
-
   '@ampproject/remapping@2.3.0':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
@@ -2194,6 +2172,24 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@media-master/express-middleware@0.0.1':
+    dependencies:
+      chalk: 5.6.2
+      express: 5.1.0
+      jsonwebtoken: 9.0.2
+      morgan: 1.10.1
+      zod: 4.1.12
+    transitivePeerDependencies:
+      - supports-color
+
+  '@media-master/http-errors@0.0.1': {}
+
+  '@media-master/load-dotenv@0.0.1':
+    dependencies:
+      dotenv: 17.2.3
+
+  '@media-master/metadata-service-tests@0.0.1': {}
+
   '@noble/hashes@1.8.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -2336,10 +2332,6 @@ snapshots:
   '@types/methods@1.1.4': {}
 
   '@types/mime@1.3.5': {}
-
-  '@types/morgan@1.9.10':
-    dependencies:
-      '@types/node': 24.8.1
 
   '@types/node@24.8.1':
     dependencies:

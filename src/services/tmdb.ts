@@ -21,7 +21,7 @@ export default class TmdbService {
     constructor(mediaType: string) {
         if (!['movies', 'series'].includes(mediaType)) {
             throw errors.notFound(
-                'Invalid endpoint! Use /api/[movies|series]/[options|info|recommendations]'
+                'Invalid endpoint! Use /[movies|series]/[options|info|recommendations]'
             );
         }
 
@@ -137,7 +137,7 @@ export default class TmdbService {
 
         if (!(method in methodMap)) {
             throw errors.notFound(
-                'Invalid endpoint! Use /api/[movies|series]/[options|info|recommendations]'
+                'Invalid endpoint! Use /[movies|series]/[options|info|recommendations]'
             );
         }
 

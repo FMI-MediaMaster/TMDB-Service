@@ -13,11 +13,11 @@
     "paths": {
       "@app": ["src/app"],
       "@types": ["src/types/index"],
-      "@routes": ["src/routes/index"],
       "@routes/*": ["src/routes/*"],
+      "@routes": ["src/routes/index"],
       "@schemas/*": ["src/schemas/*"],
       "@services/*": ["src/services/*"],
-      "@controllers/*": ["src/controllers/*"],
+      "@controllers/*": ["src/controllers/*"]
     }
   },
   "include": ["src"],

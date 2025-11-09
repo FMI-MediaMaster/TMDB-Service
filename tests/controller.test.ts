@@ -6,8 +6,8 @@ import app from '../src/app';
 const server = app as Express;
 
 describe('Controller', () => {
-    describe('Endpoint /api/movies', () => {
-        const endpoint: string = '/api/movies';
+    describe('Endpoint /movies', () => {
+        const endpoint: string = '/movies';
         const validMap: object = {
             'Spider-Man': '557',
             'Home alone': '771',
@@ -51,8 +51,8 @@ describe('Controller', () => {
         );
     });
 
-    describe('Endpoint /api/series', () => {
-        const endpoint: string = '/api/series';
+    describe('Endpoint /series', () => {
+        const endpoint: string = '/series';
         const validMap: object = {
             'Arcane': '94605',
             '12 Monkeys': '60948',
